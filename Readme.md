@@ -1,10 +1,10 @@
-### Requirements
+# Requirements
 * Java 11
 * Maven 3
 * Allure 2
 
 
-# Java Installation
+## Java Installation
 Check your system to see if you have Java version 11.0.2 installed.
 Command:
 ```bash
@@ -35,7 +35,7 @@ $ mvn clean test
 ```bash
 $ allure serve
 ```
-## Built with
+# Built with
 - Selenium : Browser automation framework
 - Maven : Build automation & dependency management
 - TestNG : Testing framework, control flow of tests
