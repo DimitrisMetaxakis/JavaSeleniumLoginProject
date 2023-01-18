@@ -12,7 +12,7 @@ import pageObjects.LoginPage;
 import java.time.Duration;
 
 /**
- * Class contains logic that is executed before and after every test
+ * Class contains logic that is executed before and after every test class
  */
 public class BaseTests {
     private WebDriver driver;

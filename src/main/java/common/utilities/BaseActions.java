@@ -74,8 +74,8 @@ public class BaseActions {
     }
 
     /**
-     * Writes on element
-     *
+     * Clears field
+     * Writes field
      * @param locator
      */
     public void sendKeys(By locator, String text) {
@@ -84,7 +84,7 @@ public class BaseActions {
     }
 
     /**
-     * Scroll at the bottom of the page with JS
+     * Scroll at the bottom of the page with Javascript
      */
     protected void scrollBottomPageJS() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
