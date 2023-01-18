@@ -42,15 +42,9 @@ public class BaseTests {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
 
-        // Enable JavaScript
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("var script = document.createElement('script');script.src =\"https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js\";document.getElementsByTagName('head')[0].appendChild(script);");
-
         baseActions = new BaseActions(driver);
         windowManager = new WindowManager(driver);
         loginPage = new LoginPage(driver);
-
-
     }
 
     /**

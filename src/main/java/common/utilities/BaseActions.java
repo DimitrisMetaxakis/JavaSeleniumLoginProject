@@ -22,7 +22,7 @@ public class BaseActions {
     }
 
     // Timeout value for explicit waits in seconds
-    private final int waitForElementTimeout = 15;
+    private final int waitForElementTimeout = 20;
 
     // Global locators
     public final By mainLogInButton = By.id("login");
@@ -42,6 +42,17 @@ public class BaseActions {
     public void waitForElement(By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitForElementTimeout));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    /**
+     * Wait for Element to be clickable
+     *
+     * @param locator
+     */
+
+    public void waitForElementIsClickable(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitForElementTimeout));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     /**
@@ -97,6 +108,7 @@ public class BaseActions {
      */
     public void clickSideLogIn() {
         waitForElement(sideLogIn);
+        // scroll to avoid random adds when appear
         scrollBottomPageJS();
         click(sideLogIn);
     }
@@ -105,8 +117,9 @@ public class BaseActions {
      * Click Log Out
      */
     public void clickLogout() {
-        waitForElement(mainLogOutButton);
+        waitForElementIsClickable(mainLogOutButton);
         click(mainLogOutButton);
+        waitForElement(mainLogInButton);
     }
 
     /**
