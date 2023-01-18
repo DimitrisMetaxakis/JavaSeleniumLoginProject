@@ -8,7 +8,7 @@
 Check your system to see if you have Java version 11.0.2 installed.
 Command:
 ```bash
-$ java -version
+$ java --version
 ```
 Ensure your JAVA_HOME environment to the location of the installed JDK.
 ## Maven Installation
@@ -17,7 +17,7 @@ Ensure your JAVA_HOME environment to the location of the installed JDK.
 3. Add Maven to the PATH
 4. Verify Maven was correctly installed
 ```bash
-$ mvn -–version
+$ mvn --version
 ```
 ## Allure Installation
 1. Download Allure
@@ -25,7 +25,7 @@ $ mvn -–version
 3. Add Allure to the PATH
 4. Verify Allure was correctly installed
 ```bash
-$ allure –-version
+$ allure --version
 ```
 ## How to run tests
 ```bash
@@ -40,4 +40,3 @@ $ allure serve
 - Maven : Build automation & dependency management
 - TestNG : Testing framework, control flow of tests
 - Allure : Report tool
-- WebDriverManagement : Local Driver binary management
