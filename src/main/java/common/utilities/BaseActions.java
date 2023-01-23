@@ -25,7 +25,7 @@ public class BaseActions {
     private final int waitForElementTimeout = 20;
 
     // Global locators
-    public final By mainLogInButton = By.id("login");
+    private final By mainLogInButton = By.id("login");
     private final By mainLogOutButton = By.cssSelector("button#submit");
     private final By userNameValue = By.cssSelector("label#userName-value");
     private final By sideLogIn = By.cssSelector("div.element-list.show li#item-0");
