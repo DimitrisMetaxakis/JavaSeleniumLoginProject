@@ -27,6 +27,11 @@ $ mvn --version
 ```bash
 $ allure --version
 ```
+
+## How to build project
+```bash
+$ mvn build
+```
 ## How to run tests
 ```bash
 $ mvn clean test
